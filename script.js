@@ -5,7 +5,7 @@ let currentRoundNumber = 1;
 const parts = ['wheels', 'wipers', 'horn', 'driver']
 const sounds = ['round and round', 'swish-swish-swish', 'beep-beep-beep', 'Move on back']
 
-//how to reset the nums in the next round (song compiling stays the same in future rounds)????
+//how to reset the nums in the next round (song compiling stays the same in future rounds)???? Maybe currentSongPick - in Game, and just 'songPick' (aka nums) here, like in 'humnaScored'???
 const generateRandomNums =() => {
     let randomNum1 = Math.floor(Math.random()*4);
     let randomNum2 = Math.floor(Math.random()*4);
