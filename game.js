@@ -33,14 +33,18 @@ runGameButton.addEventListener('click', () => {
    //Display the compiled song:
   songResultLabel.innerText = 'Is the song right?';
 
+  const part = generatePart();
+  const sound1 = generateSound1();
+  const sound2 = generateSound2();
+
   for(i=0; i< partDisplays.length; i++){
-    partDisplays[i].innerHTML = generatePart();
+    partDisplays[i].innerHTML = part;
      };
   for(i=0; i< sound1Displays.length; i++){
-    sound1Displays[i].innerHTML = generateSound1();
+    sound1Displays[i].innerHTML = sound1;
      };
   for(i=0; i< sound2Displays.length; i++){
-    sound2Displays[i].innerHTML = generateSound2();
+    sound2Displays[i].innerHTML = sound2;
      };
   
    // Generate the random answers:

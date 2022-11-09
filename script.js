@@ -5,26 +5,31 @@ let currentRoundNumber = 1;
 const parts = ['wheels', 'wipers', 'horn', 'driver']
 const sounds = ['round and round', 'swish-swish-swish', 'beep-beep-beep', 'Move on back']
 
-let randomNum1 = Math.floor(Math.random()*4);
-let randomNum2 = Math.floor(Math.random()*4);
-let part=parts[randomNum1];
-let sound1=sounds[randomNum1];
-let sound2=sounds[randomNum2];
+//how to reset the nums in the next round (song compiling stays the same in future rounds)????
+const generateRandomNums =() => {
+    let randomNum1 = Math.floor(Math.random()*4);
+    let randomNum2 = Math.floor(Math.random()*4);
+    return [randomNum1, randomNum2];
+}
+const nums = generateRandomNums();
 
 const generateSongResult = () => {
+    var sound1=sounds[nums[0]];
+    var sound2=sounds[nums[1]];;
     return sound1===sound2 ? 'Yes' : 'No';
 }
 
-const generatePart = () => {
+const generatePart =() => {
+    var part=parts[nums[0]];
     return part;
 }
+
 const generateSound1 = () => {
-    return sound1;
+    return sound1=sounds[nums[0]];
 }
 const generateSound2 = () => {
-    return sound2;
+    return sound2=sounds[nums[1]];
 }
-
 
 const generateCompAnswer = () => {
     let randomYN1 = Math.random() < 0.5;
