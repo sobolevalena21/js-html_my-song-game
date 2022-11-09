@@ -31,24 +31,25 @@ const nextRoundButton = document.getElementById('next-round')
 //Clicking on 'Run the Game' Button:
 runGameButton.addEventListener('click', () => {
    //Display the compiled song:
-  songResultLabel.innerText = 'Is the song right?';
+  songResultLabel.innerText = 'Does the 2nd line of the song match?';
 
-  const part = generatePart();
-  const sound1 = generateSound1();
-  const sound2 = generateSound2();
+  const nums = generateRandomNums();
+  const part = parts[nums[0]];
+  const sound1 = sounds[nums[0]];
+  const sound2 = sounds[nums[1]];
 
-  for(i=0; i< partDisplays.length; i++){
+  for(i=0; i<partDisplays.length; i++){
     partDisplays[i].innerHTML = part;
      };
-  for(i=0; i< sound1Displays.length; i++){
+  for(i=0; i<sound1Displays.length; i++){
     sound1Displays[i].innerHTML = sound1;
      };
-  for(i=0; i< sound2Displays.length; i++){
+  for(i=0; i<sound2Displays.length; i++){
     sound2Displays[i].innerHTML = sound2;
      };
   
    // Generate the random answers:
-  target = generateSongResult(); //Function defined in Script.js.
+  target = sound1===sound2 ? 'Yes' : 'No'; //Function defined in Script.js.
     // Retrieve the player's guess
   const currentHumanGuess = humanGuessInput.elements["human-guess"].value;
     // Make a random 'computer guess'

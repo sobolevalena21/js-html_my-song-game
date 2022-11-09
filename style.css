@@ -1,6 +1,12 @@
 * {
   font-family: 'Nunito Sans';
   box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
@@ -9,112 +15,106 @@ body {
   background-color: #fff;
 }
 
-.game-container {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-header {
+main {
   display: flex;
-  justify-content: center
+  flex-direction: column;
+  align-items: center;
 }
+.game-name {
+  background-color: #DBE9EE;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  line-height: 1.4;
+  padding: 10px;
+}
+h1 {
+  color: #466995;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+h2 {
+    color: #333;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding-bottom: 10px;
+  }
+  
 
 .rounds {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.round-label {
-  font-size: 30px;
+  text-align: center;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0px;
-}
-
-.guess {
-  min-width: 303px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 19px;
+  margin: 10px auto;
 }
 
 .guessing-area {
   display: flex;
-  justify-content: space-around;
   align-items: flex-start;
   margin-bottom: 20px;
 }
 
-.guess-title {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0px;
+  margin: 0 20px;
 }
-
-.player-label {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 10px auto 20px auto;
-}
-
 .score-label {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
-.target-guess {
+.guess {
+  min-width: 303px;
+  height: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.computer-guess {
-  background-color: #ececec;
-}
-
-#computer-guess {
-  font-size: 50px;
-  font-weight: 700;
-  color: #a5a5a5;
-  margin: 35px;
-}
-
-.human-guess {
   border: 1px solid #979797;
 }
 
+.player-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px;
+}
+
+
+#computer-guess {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a5a5a5;
+  margin: 2.5rem auto;
+}
+
 #guess-field {
-  height: 90px;
-  width: 90px;
-  font-size: 30px;
+  height: 80px;
+  width: 120px;
+  font-size: 1.8rem;
   text-align: center;
   margin: 14px auto;
   display: block;
 }
 
+.radio-wrap {
+  display: flex;
+  justify-content: space-between;
 
+}
  .radio > input {
   border: solid 1px #4c7ef3;
-  display: inline-block;
   width: 45px;
   height: 35px;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #4c7ef3;
   cursor: pointer;
-}
-
-.radio > label {
-  display: flex;
-  justify-content: space-around;
+  padding: 5px;
 }
 
 
@@ -130,7 +130,7 @@ header {
   height: 59px;
   border: none;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 input[type=text]::-webkit-inner-spin-button {
@@ -144,29 +144,47 @@ input[type=text]::-webkit-inner-spin-button {
 #song-result {
   margin: 20px auto;
   border: 1px solid #979797;
+  width: 646px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
 }
 
-#song-result-label, #target-answer {
-  font-size: 18px;
+/* vertically centers all elements in the #song-result */
+#song-result > p {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 
+}
+
+#song-result p:first-child {
+  margin-top: 15px;
+}
+
+#song-result p:last-child {
+  margin-bottom: 15px;
+}
+
+#song-result-label {
+  font-size: 1rem;
   font-weight: 700;
-  margin: 25px auto 5px auto;
+  padding-top: 15px;
   color: red;
 }
 
 #target-answer {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
-  margin: 5px;
   color: red;
 }
-
 
 #next-round {
   width: 179px;
   height: 64px;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
-  margin: 20px auto;
+  margin-bottom: 20px;
 }
   
 .button[disabled] {
@@ -189,7 +207,7 @@ input[type=text]::-webkit-inner-spin-button {
 }
 
 .instructions h3 {
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 

@@ -11,25 +11,6 @@ const generateRandomNums =() => {
     let randomNum2 = Math.floor(Math.random()*4);
     return [randomNum1, randomNum2];
 }
-const nums = generateRandomNums();
-
-const generateSongResult = () => {
-    var sound1=sounds[nums[0]];
-    var sound2=sounds[nums[1]];;
-    return sound1===sound2 ? 'Yes' : 'No';
-}
-
-const generatePart =() => {
-    var part=parts[nums[0]];
-    return part;
-}
-
-const generateSound1 = () => {
-    return sound1=sounds[nums[0]];
-}
-const generateSound2 = () => {
-    return sound2=sounds[nums[1]];
-}
 
 const generateCompAnswer = () => {
     let randomYN1 = Math.random() < 0.5;

@@ -7,54 +7,56 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-      <div class="game-container">
-        <header>
-          <h1>"Wheels on the Bus" <br> Mixed up Song</h1>
-        </header>
+    <main>
+      <div class="game-name">
+        <h1>Wheels on the Bus</h1>
+        <h2> Mixed up Song</h2>
+      </div>
+      <div class="rounds">
+        <p>Round <span id="round-number">1</span></p>
+      </div>
 
-        <div class="rounds">
-          <p class="round-label">Round <span id="round-number">1</span></p>
+      <div class="guessing-area">
+        <div class="container">
+            <p class="score-label">Score: <span id="computer-score">0</span></p>
+          <div class="guess computer-guess">
+              <p class="player-label">Computer</p>
+              <p id="computer-guess">?</p>
+              <p class="winning-text" id="computer-wins"></p>
+            </div>
         </div>
 
-        <div class="guessing-area">
-          <div class="guess computer-guess">
-            <div class="guess-title">
-              <p class="score-label">Score: <span id="computer-score">0</span></p>
-              <p class="player-label">Computer</p>
-            </div>
-            <p id="computer-guess">?</p>
-            <p class="winning-text" id="computer-wins"></p>
-          </div>
+        <div class="container">
+          <p class="score-label">Score: <span id="human-score">0</span></p>
           <div class="guess human-guess">
-            <div class="guess-title">
-              <p class="score-label">Score: <span id="human-score">0</span></p>
               <p class="player-label">You</p>
-            </div>
-            <form id = "human-guess">
-                <label><input class = "radio" type="radio" id="radioYes" name="human-guess" value="Yes">Yes</label>
-                <label><input class = "radio" type="radio" id="radioNo" name="human-guess" value="No">No</label>
+              <form id = "human-guess">
+                <div class = "radio-wrap">
+                  <label><input class = "radio" type="radio" id="radioYes" name="human-guess" value="Yes">Yes</label>
+                  <label><input class = "radio" type="radio" id="radioNo" name="human-guess" value="No">No</label>
+                </div>
                 <input id = "guess-field" type = "text">
-              </form>
+                </form>
               <p class="winning-text" id="human-wins"></p>
           </div>
         </div>
+      </div>
   
-        <button class="button" id="game-button">Run the Game</button>
+      <button class="button" id="game-button">Run the Game</button>
 
-        <div id="song-result">
+      <div id="song-result">
           <p>The <span class="part">______</span> on the bus go <span class="sound1">______</span>, <span class="sound1">______</span>, <span class="sound1">______</span>,</p>
-          <p>the <span class="part">______</span> on the bus go <span class="sound2">______</span> all through the town.</p>
+          <p>The <span class="part">______</span> on the bus go <span class="sound2">______</span> all through the town.</p>
           <p id ="song-result-label"></p>
           <p id="target-answer"></p>
         </div>
 
-        <div class="next-round-container">
+      <div class="next-round-container">
           <button class="button" id="next-round" disabled>Next Round</button>
         </div>
+    </main>
 
-      </div>
-
-      <div class="instructions">
+      <footer class="instructions">
         <div class="instruction">
           <h3>Step 1</h3>
           <p>Select Yes or No in "Your Guess" section</p>
@@ -67,12 +69,12 @@
           <h3>Step 3</h3>
           <p>Click "Next Round" to play again.</p>
         </div>
-      </div>
+      </footer>
   
       <script src="./script.js"></script>
       <script src="./game.js"></script>
 
-      </body>
+  </body>
 
 
       
