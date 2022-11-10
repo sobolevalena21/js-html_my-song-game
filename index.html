@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>My Project "Mixed Messages"</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <div class="game-name">
+        <h1>Wheels on the Bus</h1>
+        <h2> Mixed up Song</h2>
+      </div>
+      <div class="rounds">
+        <p>Round <span id="round-number">1</span></p>
+      </div>
+
+      <div class="guessing-area">
+        <div class="container">
+            <p class="score-label">Score: <span id="computer-score">0</span></p>
+          <div class="guess computer-guess">
+              <p class="player-label">Computer</p>
+              <p id="computer-guess">?</p>
+              <p class="winning-text" id="computer-wins"></p>
+            </div>
+        </div>
+
+        <div class="container">
+          <p class="score-label">Score: <span id="human-score">0</span></p>
+          <div class="guess human-guess">
+              <p class="player-label">You</p>
+              <form id = "human-guess">
+                <div class = "radio-wrap">
+                  <label><input class = "radio" type="radio" id="radioYes" name="human-guess" value="Yes">Yes</label>
+                  <label><input class = "radio" type="radio" id="radioNo" name="human-guess" value="No">No</label>
+                </div>
+                <input id = "guess-field" type = "text">
+                </form>
+              <p class="winning-text" id="human-wins"></p>
+          </div>
+        </div>
+      </div>
+  
+      <button class="button" id="game-button">Run the Game</button>
+
+      <div id="song-result">
+          <p>The <span class="part">______</span> on the bus go <span class="sound1">______</span>, <span class="sound1">______</span>, <span class="sound1">______</span>,</p>
+          <p>The <span class="part">______</span> on the bus go <span class="sound2">______</span> all through the town.</p>
+          <p id ="song-result-label"></p>
+          <p id="target-answer"></p>
+        </div>
+
+      <div class="next-round-container">
+          <button class="button" id="next-round" disabled>Next Round</button>
+        </div>
+    </main>
+
+      <footer class="instructions">
+        <div class="instruction">
+          <h3>Step 1</h3>
+          <p>Select Yes or No in "Your Guess" section</p>
+        </div>
+        <div class="instruction">
+          <h3>Step 2</h3>
+          <p>Click "Run the Game" to submit your guess and see if you guessed right.</p>
+        </div>
+        <div class="instruction">
+          <h3>Step 3</h3>
+          <p>Click "Next Round" to play again.</p>
+        </div>
+      </footer>
+  
+      <script src="./script.js"></script>
+      <script src="./game.js"></script>
+
+  </body>
+
+
+      
