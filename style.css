@@ -5,20 +5,21 @@
   padding: 0;
 }
 
-html {
+html, body {
+  height: 100%
+  width: 100%
   font-size: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0 auto;
-  padding: 3px;
-  background-color: #fff;
-}
 
 main {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .game-name {
   background-color: #DBE9EE;
@@ -196,8 +197,13 @@ input[type=text]::-webkit-inner-spin-button {
 .instructions {
   background-color: #ececec;
   width: 100%;
+  min-height: 150px;
+  /* align-items: flex-end; */
   display: flex;
   justify-content: space-around;
+  margin-bottom: 0;
+  align-items: center;
+
 }
 
 .instruction {

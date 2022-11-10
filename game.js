@@ -31,7 +31,7 @@ const nextRoundButton = document.getElementById('next-round')
 //Clicking on 'Run the Game' Button:
 runGameButton.addEventListener('click', () => {
    //Display the compiled song:
-  songResultLabel.innerText = 'Does the 2nd line of the song match?';
+  songResultLabel.innerText = '2nd line matches the 1st?';
 
   const nums = generateRandomNums();
   const part = parts[nums[0]];
